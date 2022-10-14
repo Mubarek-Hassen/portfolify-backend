@@ -3,7 +3,7 @@ const router = express.Router()
 
 const db = require('../models/Portfolio')
 
-router.get('/', async (req, res, next) =>{
+router.get('/portfolios', async (req, res, next) =>{
   try {
     res.json(await db.find({}))
   } catch (error) {
