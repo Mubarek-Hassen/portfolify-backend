@@ -6,10 +6,10 @@ const PORT = process.env.PORT
 const cors = require('cors')
 const morgan = require('morgan')
 const routes = require('./routes')
-const { urlencoded } = require('express')
+
 
 app.use(express.urlencoded({extended: true}))
-app.use('/portfolio', routes.portfolio)
+app.use('/portfolios', routes.portfolio)
 
 app.get('/', (req, res)=>{
   res.send('Hi World')
