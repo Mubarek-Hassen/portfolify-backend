@@ -13,7 +13,7 @@ const portfolioSchema = new mongoose.Schema({
     type: String,
     required: [true, 'You must show your smile! :)']
   },
-  skills: [{skill: String}],
+  skills: [{type: String}],
   projects: [{
     title: String,
     image: String,

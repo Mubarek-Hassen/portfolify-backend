@@ -9,6 +9,7 @@ const morgan = require('morgan')
 const routes = require('./routes')
 
 app.use(express.json())
+app.use(cors())
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 app.use('/portfolios', routes.portfolio)
